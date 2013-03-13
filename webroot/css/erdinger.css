@@ -1,0 +1,36 @@
+
+#erdebug {
+    position: relative;
+    border: 2px dashed red;
+}
+#erdingerCanvas {
+    width: 99%;
+    margin: 30px auto;
+    height: 600px;
+    background-color: #EEE;
+}
+.erdingerClass {
+    width: 200px;
+    padding: 10px;
+    outline: 1px solid #333;
+    float: left;
+    margin: 5px;
+    background-color: #FFE;
+    cursor: pointer;
+    position: relative;
+    font-size: 11px;
+}
+.erdingerClass h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+.erdingerClass em {
+    color: #555;
+    padding-top: 5px;
+}
+.erdingerClass strong {
+    color: #222;
+    font-weight: normal;
+    background-color: #EFD;
+}
