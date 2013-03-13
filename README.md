@@ -7,10 +7,10 @@ An ERD diagram generator for cakePHP
 Installation
 ============
 
-Add to following to Config/bootstrap.php
+Add to following to `Config/bootstrap.php`
 
 ````php
-CakePlugin::load('Erdinger', array('routes' => true));`
+CakePlugin::load('Erdinger', array('routes' => true));
 ````
 
 Usage
