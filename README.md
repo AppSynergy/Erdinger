@@ -1,7 +1,5 @@
-Erdinger
-========
 
-## An ERD diagram generator for cakePHP ##
+## Erdinger - an ERD diagram generator for cakePHP ##
 
 
 Installation
