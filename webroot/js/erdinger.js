@@ -44,9 +44,20 @@ jsPlumb.bind("ready", function() {
     jQuery(erdHasManyConnections).each(function(i, conn) {
         jsPlumb.connect({ 
             source: erdEndPointVars[conn[0]],
-            target: erdEndPointVars[conn[1]]        
+            target: erdEndPointVars[conn[1]],
+            paintStyle: { lineWidth:1, strokeStyle:'#11A' }
         });
     });
+    
+    // create HasOne connections
+    jQuery(erdHasOneConnections).each(function(i, conn) {
+        jsPlumb.connect({ 
+            source: erdEndPointVars[conn[0]],
+            target: erdEndPointVars[conn[1]],
+            paintStyle: { lineWidth:1, strokeStyle:'#0BB' }
+            
+        });
+    });  
     
     // create HABTM connections
     jQuery(erdHABTMConnections).each(function(i, conn) {

@@ -23,15 +23,22 @@ foreach($data as $modelName => $modelInfo) {
     }
     $hABTM = array_keys($modelInfo['assoc']['hasAndBelongsToMany']);
     if(!empty($hABTM)) {
-        foreach($hABTM as $hm) {
-            $hABTMConnections[] = '["'.$modelName.'","'.$hm.'"]';
+        foreach($hABTM as $ha) {
+            $hABTMConnections[] = '["'.$modelName.'","'.$ha.'"]';
+        }
+    }
+    $hasOne = array_keys($modelInfo['assoc']['hasOne']);
+    if(!empty($hasOne)) {
+        foreach($hasOne as $ho) {
+            $hasOneConnections[] = '["'.$modelName.'","'.$ho.'"]';
         }
     }
 }
 echo $this->Html->scriptblock('
     var erdEndPoints = ['.implode(", ", $endpoints).'];
     var erdHasManyConnections = ['.implode(", ", $hasManyConnections).'];
-    var erdHABTMConnections = ['.implode(", ", $hABTMConnections).'];    
+    var erdHABTMConnections = ['.implode(", ", $hABTMConnections).'];
+    var erdHasOneConnections = ['.implode(", ", $hasOneConnections).'];
 ', array('inline' => false));
 
 // custom
@@ -44,13 +51,22 @@ $this->Html->script('Erdinger.erdinger.js', array('inline' => false));
 ?>
 
 <h1>Erdinger - ERD Diagrams for cakePHP</h1>
-<h3>Drag and drop to make this diagram look prettier, then save a screen grab for your records.</h3>
+<p>Drag and drop to make this diagram look prettier, then save a screen grab for your records.</p>
+
+<div id="erdingerKey">
+    <strong>Key:</strong>
+    <ul>
+        <li class="hasOne">hasOne</li>
+        <li class="hasMany">hasMany</li>
+        <li class="hasHABTM">hasAndBelongsToMany</li>
+</div>
+
 <div id="erdingerCanvas">
 <?php
 foreach($data as $modelName => $modelInfo) {
     echo '<div class="erdingerClass" id="erd'.$modelName.'">';
     echo "<h3>".$modelName."</h3>";
-    echo "<p><strong> |";
+    echo "<p><strong> | ";
     foreach($modelInfo['schema'] as $fieldName => $fieldAttrs) {
         echo $fieldName."  |  ";
     }

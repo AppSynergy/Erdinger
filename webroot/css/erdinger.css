@@ -3,6 +3,26 @@
     position: relative;
     border: 2px dashed red;
 }
+
+#erdingerKey {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+}
+#erdingerKey ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+#erdingerKey .hasOne {
+    color: #0BB;
+}
+#erdingerKey .hasMany {
+    color: #11A;
+}
+#erdingerKey .hasHABTM {
+    color: #F90;
+}
 #erdingerCanvas {
     width: 99%;
     margin: 30px auto;
@@ -18,12 +38,16 @@
     background-color: #FFE;
     cursor: pointer;
     position: relative;
-    font-size: 11px;
+    font-size: 10px;
 }
 .erdingerClass h3 {
     margin: 0;
     padding: 0;
-    font-size: 18px;
+    font-size: 13px;
+}
+.erdingerClass p {
+    margin: 0;
+    padding: 2px 0;
 }
 .erdingerClass em {
     color: #555;
@@ -32,5 +56,5 @@
 .erdingerClass strong {
     color: #222;
     font-weight: normal;
-    background-color: #EFD;
+    background-color: #CFB;
 }
