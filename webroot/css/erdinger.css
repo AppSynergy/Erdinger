@@ -1,4 +1,6 @@
-
+body {
+	font-family: Lato, sans-serif;
+}
 #erdebug {
     position: relative;
     border: 2px dashed red;

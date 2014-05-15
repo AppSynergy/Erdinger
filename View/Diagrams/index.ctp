@@ -3,6 +3,7 @@
 
 // includes
 $this->Html->css('/Erdinger/css/erdinger', null, array('inline' => false));
+$this->Html->css('http://fonts.googleapis.com/css?family=Lato', array('inline' => false));
 $this->Html->script('http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js', array('inline' => false));
 $this->Html->script('http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js', array('inline' => false));
 $this->Html->script('Erdinger.jsPlumb/jquery.jsPlumb-1.3.16-all.js', array('inline' => false));

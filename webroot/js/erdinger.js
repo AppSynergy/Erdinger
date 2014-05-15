@@ -45,6 +45,7 @@ jsPlumb.bind("ready", function() {
         jsPlumb.connect({ 
             source: erdEndPointVars[conn[0]],
             target: erdEndPointVars[conn[1]],
+			connector: ["Bezier", { curviness:63 } ],
             paintStyle: { lineWidth:1, strokeStyle:'#11A' }
         });
     });
