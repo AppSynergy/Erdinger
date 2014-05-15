@@ -9,6 +9,7 @@ $this->Html->script('Erdinger.jsPlumb/jquery.jsPlumb-1.3.16-all.js', array('inli
 
 // vars
 $endpoints = array();
+$hasOneConnections = array();
 $hasManyConnections = array();
 $hABTMConnections = array();
 foreach($data as $modelName => $modelInfo) {
