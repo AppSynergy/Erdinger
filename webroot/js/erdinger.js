@@ -8,14 +8,14 @@ jsPlumb.bind("ready", function() {
         EndpointStyle : { fillStyle : null },
         Connector: [ "Flowchart", { stub:[10,10], gap: 5 } ],
         PaintStyle: { lineWidth:2, strokeStyle:'#555' },
-        ConnectionOverlays : [
+        /*ConnectionOverlays : [
             [ "Diamond", { 
                 location:1,
                 id:"arrow",
                 length:14,
                 foldback:0.8
             } ],
-        ]
+        ]*/
     });
 
     // make elements draggable
