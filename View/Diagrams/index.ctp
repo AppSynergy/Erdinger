@@ -68,17 +68,16 @@ $this->Html->script('Erdinger.erdinger.js', array('inline' => false));
 foreach($data as $modelName => $modelInfo) {
     echo '<div class="erdingerClass" id="erd'.$modelName.'">';
     echo "<h3>".$modelName."</h3>";
-    echo "<p><strong> | ";
+	//debug($modelInfo['schema']);
     foreach($modelInfo['schema'] as $fieldName => $fieldAttrs) {
-        echo $fieldName."  |  ";
+        echo "<p>".$fieldName." | ".$fieldAttrs['type']."</p>";
     }
-    echo "</strong><br /><em>";
     foreach($modelInfo['assoc'] as $assocType => $assocInfo) {
         foreach($assocInfo as $assocModel => $assocAttrs) {
-            echo $assocType." --> ".$assocModel."<br />";
+            echo "<p><em>".$assocType." --> ".$assocModel."</em></p>";
         }
     }
-    echo '</em></p></div>';
+    echo '</div>';
 }
 ?>
 </div>

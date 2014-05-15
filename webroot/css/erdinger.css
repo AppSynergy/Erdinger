@@ -50,6 +50,7 @@ body {
 .erdingerClass p {
     margin: 0;
     padding: 2px 0;
+	line-height: 90%;
 }
 .erdingerClass em {
     color: #555;

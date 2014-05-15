@@ -46,7 +46,7 @@ jsPlumb.bind("ready", function() {
             source: erdEndPointVars[conn[0]],
             target: erdEndPointVars[conn[1]],
 			connector: ["Bezier", { curviness:63 } ],
-            paintStyle: { lineWidth:1, strokeStyle:'#11A' }
+            paintStyle: { lineWidth:2, strokeStyle:'#11A' }
         });
     });
     
@@ -55,7 +55,8 @@ jsPlumb.bind("ready", function() {
         jsPlumb.connect({ 
             source: erdEndPointVars[conn[0]],
             target: erdEndPointVars[conn[1]],
-            paintStyle: { lineWidth:1, strokeStyle:'#0BB' }
+			connector: ["Bezier", { curviness:63 } ],
+            paintStyle: { lineWidth:2, strokeStyle:'#0BB' }
             
         });
     });  
@@ -65,6 +66,7 @@ jsPlumb.bind("ready", function() {
         jsPlumb.connect({ 
             source: erdEndPointVars[conn[0]],
             target: erdEndPointVars[conn[1]],
+			connector: ["Bezier", { curviness:63 } ],
             paintStyle: { lineWidth:2, strokeStyle:'#F90' }
             
         });
